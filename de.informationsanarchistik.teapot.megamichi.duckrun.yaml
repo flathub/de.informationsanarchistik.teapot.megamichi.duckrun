@@ -1,8 +1,6 @@
-id: de.informationsanarchistik.teapot.megamichi.duckrun
+app-id: de.informationsanarchistik.teapot.megamichi.duckrun
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
-base: org.godotengine.godot.BaseApp
-base-version: '4.4'
 sdk: org.freedesktop.Sdk
 command: godot-runner
 
@@ -13,21 +11,54 @@ finish-args:
   - --socket=pulseaudio
 
 modules:
-  - name: duckrun
+  - name: python3-scons
     buildsystem: simple
+    build-commands:
+      - pip3 install
+          --no-deps
+          --no-build-isolation
+          --no-index
+          --find-links=.
+          --prefix=/app
+          scons
+      - scons --version
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/ce/bf/931fb9fbb87234c32b8b1b1c15fba23472a10777c12043336675633809a7/scons-4.10.1-py3-none-any.whl
+        sha256: bd9d1c52f908d874eba92a8c0c0a8dcf2ed9f3b88ab956d0fce1da479c4e7126
 
+  - name: godot
+    buildsystem: simple
+    build-commands:
+      - scons platform=linuxbsd target=template_release tools=yes precision=single
+        module_mono=no optimize=speed production=yes
+      - install -Dm755 bin/godot.linuxbsd.template_release.x86_64 /app/bin/godot-runner
+      
     sources:
       - type: git
-        url: https://teapot.informationsanarchistik.de/Megamichi/DuckRun.git
-        commit: dc610f2c7d787bff2f507145d80f9e26eca4c871
+        url: https://github.com/godotengine/godot.git
+        tag: 4.5.1-stable
+        commit: f62fdbde15035c5576dad93e586201f4d41ef0cb
+
+  - name: duckrun
+    buildsystem: simple
+    sources:
+      - type: file
+        url: https://teapot.informationsanarchistik.de/Megamichi/DuckRun/releases/download/3.0.3/DuckRun_v3.0.3_linux.pck
+        sha256: 1ad6ce331064c336b4ee9c0261ec3f2dbe2d2a66a69aff9b816416b69d0c2c39
+      
+      - type: file
+        path: de.informationsanarchistik.teapot.megamichi.duckrun.metainfo.xml
 
       - type: file
-        url: https://teapot.informationsanarchistik.de/Megamichi/DuckRun/releases/download/3.0.1/DuckRun_v3.0.1.pck
-        sha256: b89891b2ab159042d501c253e11edc8ef89a4d82efdf3dd79230c7232cd11731
+        path: de.informationsanarchistik.teapot.megamichi.duckrun.desktop
+
+      - type: file
+        path: icon.svg
 
     build-commands:
-      - install -Dm644 DuckRun_v3.0.1.pck ${FLATPAK_DEST}/bin/godot-runner.pck
-      - install -Dm644 flatpak/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 flatpak/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
-      - install -Dm644 flatpak/icon.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
-
+      - ls
+      - install -Dm644 DuckRun_v3.0.3_linux.pck /app/bin/godot-runner.pck
+      - install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 icon.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
