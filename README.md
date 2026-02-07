@@ -1,4 +1,4 @@
-# DuckRun [<img src="https://teapot.informationsanarchistik.de/Megamichi/DuckRun/raw/branch/main/icon.png" title="Alt text" width="30" height="30">](DuckRun)
+# DuckRun
 DuckRun a little crome dino game clone, made in the Godot game engine.
 
 [Downloads](https://teapot.informationsanarchistik.de/Megamichi/DuckRun/releases)
