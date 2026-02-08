@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>de.informationsanarchistik.teapot.megamichi.duckrun</id>
+  
+  <name>DuckRun</name>
+  <summary>Jump like a duck</summary>
+  <content_rating type="oars-1.1" />
+  
+  <url type="homepage">https://teapot.informationsanarchistik.de/Megamichi/DuckRun</url>
+  <url type="vcs-browser">https://teapot.informationsanarchistik.de/Megamichi/DuckRun</url>
+  <url type="bugtracker">https://teapot.informationsanarchistik.de/Megamichi/DuckRun/issues</url>
+  <url type="contact">https://gubb.i21k.de/Megamichi</url>
+  <url type="faq">https://megamichi.itch.io/duckrun</url>
+  <url type="contribute">https://teapot.informationsanarchistik.de/Megamichi/DuckRun</url>
+
+  <developer id="de.informationsanarchistik.teapot.megamichi">
+    <name translatable="no">Michael S.</name>
+  </developer>
+  <update_contact>eine.3mail_AT_gmail.com</update_contact>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>AGPL-3.0-or-later</project_license>
+  
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+    <control>gamepad</control>
+    <control>tablet</control>
+    <control>tv-remote</control>
+  </supports>
+  
+  <description>
+    <p>
+      DuckRun is a small game about a duck who likes to hop and explore the landscape a little.
+    </p>
+    <p>
+      Just buy a hat or some shoes in the shop, but first you have to collect some coins.
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">de.informationsanarchistik.teapot.megamichi.duckrun.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://teapot.informationsanarchistik.de/Megamichi/DuckRun/raw/commit/4f6421fe5f172110198e8c51ce936de0108db943/flatpak/screenshots/1.png</image>
+      <caption>Collect coins</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://teapot.informationsanarchistik.de/Megamichi/DuckRun/raw/commit/4f6421fe5f172110198e8c51ce936de0108db943/flatpak/screenshots/2.png</image>
+      <caption>The little shop</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://teapot.informationsanarchistik.de/Megamichi/DuckRun/raw/commit/4f6421fe5f172110198e8c51ce936de0108db943/flatpak/screenshots/3.png</image>
+      <caption>And the Main menu</caption>
+    </screenshot>
+  </screenshots>
+  
+  <requires>
+    <internet>offline-only</internet>
+  </requires>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#c4ffc4</color>
+    <color type="primary" scheme_preference="dark">#16a616</color>
+  </branding>
+  
+  <releases>
+    <release version="3.0.3" date="2026-01-13">
+      <description>
+        <ul>
+          <li>fixing stupid bug in shop thanks @alderwick@merveilles.town</li>
+          <li>updating Readme and fdroid metadata</li>
+        </ul>
+        <p>Version 3.0.2 changes:</p>
+        <ul>
+          <li>adding coin powerup</li>
+          <li>reorganize some files</li>
+          <li>fully rework of main logic</li>
+          <li>godot 4.5.1 migration</li>
+          <li>add headset</li>
+          <li>remove unused fuctions and optimisations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.0.2" date="2025-12-30">
+      <description>
+        <ul>
+          <li>adding coin powerup</li>
+          <li>reorganize some files</li>
+          <li>fully rework of main logic</li>
+          <li>godot 4.5.1 migration</li>
+          <li>add headset</li>
+          <li>remove unused fuctions and optimisations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.0.1" date="2025-08-19">
+      <description>
+        <p>Flathub launch!!</p>
+        <ul>
+          <li>better sounds</li>
+          <li>fix shop preview</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.0.0" date="2025-08-17">
+      <description>
+        <p>Flatpak launch!!</p>
+        <ul>
+          <li>adding shop</li>
+          <li>adding about screen</li>
+          <li>fixing some bugs</li>
+          <li>adding skins</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</component>
+
