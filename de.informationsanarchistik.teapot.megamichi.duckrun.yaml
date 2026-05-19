@@ -1,6 +1,6 @@
 app-id: de.informationsanarchistik.teapot.megamichi.duckrun
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: godot-runner
 
@@ -26,13 +26,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/ce/bf/931fb9fbb87234c32b8b1b1c15fba23472a10777c12043336675633809a7/scons-4.10.1-py3-none-any.whl
         sha256: bd9d1c52f908d874eba92a8c0c0a8dcf2ed9f3b88ab956d0fce1da479c4e7126
-
-  - name: godot
-    buildsystem: simple
-    build-commands:
-      - scons platform=linuxbsd target=template_release tools=yes precision=single
-        module_mono=no optimize=speed production=yes
-      - install -Dm755 bin/godot.linuxbsd.template_release.x86_64 /app/bin/godot-runner
 
   - name: godot
     buildsystem: simple
