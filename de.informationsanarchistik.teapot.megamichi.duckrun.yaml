@@ -34,6 +34,13 @@ modules:
         module_mono=no optimize=speed production=yes
       - install -Dm755 bin/godot.linuxbsd.template_release.x86_64 /app/bin/godot-runner
 
+  - name: godot
+    buildsystem: simple
+    build-commands:
+      - scons platform=linuxbsd target=template_release tools=yes precision=single
+        module_mono=no optimize=speed production=yes
+      - install -Dm755 bin/godot.linuxbsd.template_release.* /app/bin/godot-runner
+
     sources:
       - type: git
         url: https://github.com/godotengine/godot.git

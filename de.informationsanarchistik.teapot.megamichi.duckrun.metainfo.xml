@@ -29,7 +29,6 @@
     <control>tablet</control>
     <control>tv-remote</control>
   </supports>
-
   <description>
     <p>
       DuckRun is a small game about a duck who likes to hop and explore the landscape a little.
@@ -38,7 +37,6 @@
       Just buy a hat or some shoes in the shop, but first you have to collect some coins.
     </p>
   </description>
-
   <launchable type="desktop-id">de.informationsanarchistik.teapot.megamichi.duckrun.desktop</launchable>
 
   <screenshots>
@@ -55,7 +53,6 @@
       <caption>And the Main menu</caption>
     </screenshot>
   </screenshots>
-
   <requires>
     <internet>offline-only</internet>
   </requires>
