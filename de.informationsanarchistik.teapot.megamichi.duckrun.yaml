@@ -1,6 +1,6 @@
 app-id: de.informationsanarchistik.teapot.megamichi.duckrun
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: godot-runner
 
@@ -33,7 +33,7 @@ modules:
       - scons platform=linuxbsd target=template_release tools=yes precision=single
         module_mono=no optimize=speed production=yes
       - install -Dm755 bin/godot.linuxbsd.template_release.* /app/bin/godot-runner
-      
+
     sources:
       - type: git
         url: https://github.com/godotengine/godot.git
@@ -44,9 +44,9 @@ modules:
     buildsystem: simple
     sources:
       - type: file
-        url: https://teapot.informationsanarchistik.de/Megamichi/DuckRun/releases/download/3.0.3/DuckRun_v3.0.3_linux.pck
-        sha256: 1ad6ce331064c336b4ee9c0261ec3f2dbe2d2a66a69aff9b816416b69d0c2c39
-      
+        url: https://teapot.informationsanarchistik.de/Megamichi/DuckRun/releases/download/3.1.1/DuckRun_v3.1.1.pck
+        sha256: 3438b0e9bfbe833989495c7598e804c6b018c3b54c031a38f0c6190b7c592ccd
+
       - type: file
         path: de.informationsanarchistik.teapot.megamichi.duckrun.metainfo.xml
 
@@ -57,7 +57,7 @@ modules:
         path: icon.svg
 
     build-commands:
-      - install -Dm644 DuckRun_v3.0.3_linux.pck /app/bin/godot-runner.pck
+      - install -Dm644 DuckRun_v3.1.1.pck /app/bin/godot-runner.pck
       - install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 icon.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg

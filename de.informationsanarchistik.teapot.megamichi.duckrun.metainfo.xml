@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>de.informationsanarchistik.teapot.megamichi.duckrun</id>
-  
+
   <name>DuckRun</name>
   <summary>Jump like a duck</summary>
   <content_rating type="oars-1.1" />
-  
+
   <url type="homepage">https://teapot.informationsanarchistik.de/Megamichi/DuckRun</url>
   <url type="vcs-browser">https://teapot.informationsanarchistik.de/Megamichi/DuckRun</url>
   <url type="bugtracker">https://teapot.informationsanarchistik.de/Megamichi/DuckRun/issues</url>
@@ -17,10 +17,10 @@
     <name translatable="no">Michael S.</name>
   </developer>
   <update_contact>eine.3mail_AT_gmail.com</update_contact>
-  
+
   <metadata_license>MIT</metadata_license>
   <project_license>AGPL-3.0-or-later</project_license>
-  
+
   <supports>
     <control>pointing</control>
     <control>keyboard</control>
@@ -29,7 +29,6 @@
     <control>tablet</control>
     <control>tv-remote</control>
   </supports>
-  
   <description>
     <p>
       DuckRun is a small game about a duck who likes to hop and explore the landscape a little.
@@ -38,7 +37,6 @@
       Just buy a hat or some shoes in the shop, but first you have to collect some coins.
     </p>
   </description>
-  
   <launchable type="desktop-id">de.informationsanarchistik.teapot.megamichi.duckrun.desktop</launchable>
 
   <screenshots>
@@ -55,7 +53,6 @@
       <caption>And the Main menu</caption>
     </screenshot>
   </screenshots>
-  
   <requires>
     <internet>offline-only</internet>
   </requires>
@@ -64,8 +61,28 @@
     <color type="primary" scheme_preference="light">#c4ffc4</color>
     <color type="primary" scheme_preference="dark">#16a616</color>
   </branding>
-  
+
   <releases>
+    <release version="3.1.1" date="2026-05-03">
+      <description>
+        <ul>
+          <li>hotfix audio sound toggle and duck jump sound</li>
+          <li>implementing pause button + keybind (esc/quit pressed)</li>
+          <li>implementing screen expand mode</li>
+          <li>implementing modular stars (based on seed)</li>
+          <li>rework gui again</li>
+          <li>simplifying ground spawning and deletion</li>
+          <li>using Autoloads correctly</li>
+          <li>updating version number format</li>
+          <li>updating git plugin</li>
+          <li>fixing About screen capturing inputs</li>
+          <li>fixing duck jitter (Duckanker positioning in Duck script)</li>
+          <li>fixing spawning of hurdless and coins on gameover</li>
+          <li>fixing double click on start and restart button</li>
+          <li>minor other things</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.0.3" date="2026-01-13">
       <description>
         <ul>
